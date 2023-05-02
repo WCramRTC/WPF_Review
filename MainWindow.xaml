@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Review"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="828">
+    <Canvas>
+        <TextBox x:Name="txtUserInput" Canvas.Left="120" TextWrapping="Wrap" Text="TextBox" Canvas.Top="34" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="User Name" Canvas.Left="30" Canvas.Top="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button x:Name="btnDisplayInformation" Content="Display Information" Canvas.Left="30" Canvas.Top="74" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="210" Click="btnDisplayInformation_Click"/>
 
-    </Grid>
+
+        <GroupBox Height="184" Header="GroupBox" Width="125" Canvas.Left="30" Canvas.Top="138" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Canvas Background="#FFAEDEFF">
+                <RadioButton x:Name="rbOne" Content="Button 1" Canvas.Left="17" Canvas.Top="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <RadioButton x:Name="rbTwo" Content="Button 2" Canvas.Left="17" Canvas.Top="52" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <RadioButton x:Name="rbThree" Content="Button 3" Canvas.Left="17" Canvas.Top="84" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <RadioButton x:Name="rbFour" Content="Button 4" Canvas.Left="17" Canvas.Top="116" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            </Canvas>
+
+
+        </GroupBox>
+        <CheckBox x:Name="chkBox" Content="CheckBox" Canvas.Left="57" Canvas.Top="340"/>
+        <ListBox x:Name="lbListName" Height="210" Width="240" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="188" Canvas.Top="161" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbListName" Canvas.Left="184" Canvas.Top="122" Width="244" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="btnListInfo" Content="Display List Info" Canvas.Left="239" Canvas.Top="390" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Click="btnListInfo_Click"/>
+        <!--Do not give a name to the rich text box-->
+        <RichTextBox Height="336" Width="302" Canvas.Left="476" Canvas.Top="52">
+            <FlowDocument> <!--Multiple Paragraphs-->
+                <Paragraph> <!--Multiple Runs--> 
+                    <Run x:Name="runText" Text="RichTextBox"/> <!--Single Line of Text-->
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+
+
+
+
+        <!--Three kinds of layouts
+        - Canvas : Put anything anywhere, unrelated
+        - Grid : Divide your layout, relative
+        - StackPanel : Which is nice and lazy
+        -->
+    </Canvas>
 </Window>
