@@ -33,6 +33,35 @@ namespace WPF_Review
         public MainWindow()
         {
             InitializeComponent();
+
+            lbStudents.ItemsSource = Data.Students;
+
+
+        } // MainWindow()
+
+
+        // Creating a data class
+        // Saving to the data class
+        // Displaying infromation in two different windows
+        // Create a very basic class
+        private void btnOpenWindow_Click(object sender, RoutedEventArgs e)
+        {
+            // OPening up a new window
+            // ---- Create a new window to open
+            // ---- Create a new button with a click event
+            // ---- When clicked, open up a seperate window
+
+            // use the new WindowName().Show() to open you new window
+            new Window2().Show();
+
+            //Window win = new Window2();
+            //win.Show();
+        } // btnOpenWindow_Click
+
+
+        #region WPF Code
+        public void WPFExampleCode()
+        {
             Preload();
 
             // This is how you add an obeservable collection
@@ -43,7 +72,7 @@ namespace WPF_Review
             _professors.Add("Dan");
 
             runText.Text = "Hi everyone";
-        } // MainWindow()
+        }
 
 
         public void Preload()
@@ -126,6 +155,9 @@ namespace WPF_Review
                 + $"Check Box Is Checked: {isChecked}"
                 );
         }
+        #endregion
+
+      
 
     } // class
 

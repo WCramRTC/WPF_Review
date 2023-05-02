@@ -27,13 +27,18 @@
         <ComboBox x:Name="cbListName" Canvas.Left="184" Canvas.Top="122" Width="244" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Button x:Name="btnListInfo" Content="Display List Info" Canvas.Left="239" Canvas.Top="390" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Click="btnListInfo_Click"/>
         <!--Do not give a name to the rich text box-->
-        <RichTextBox Height="336" Width="302" Canvas.Left="476" Canvas.Top="52">
-            <FlowDocument> <!--Multiple Paragraphs-->
-                <Paragraph> <!--Multiple Runs--> 
-                    <Run x:Name="runText" Text="RichTextBox"/> <!--Single Line of Text-->
+        <RichTextBox Height="70" Width="177" Canvas.Left="251" Canvas.Top="19">
+            <FlowDocument>
+                <!--Multiple Paragraphs-->
+                <Paragraph>
+                    <!--Multiple Runs-->
+                    <Run x:Name="runText" Text="RichTextBox"/>
+                    <!--Single Line of Text-->
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
+        <Button x:Name="btnOpenWindow" Content="Open Window" Canvas.Left="538" Canvas.Top="363" Height="37" Width="230" Click="btnOpenWindow_Click"/>
+        <ListBox x:Name="lbStudents" Height="273" Width="222" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="538" Canvas.Top="54"/>
 
 
 
